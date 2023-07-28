@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portflio</title>
-    <link rel="stylesheet" src="/styles/styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="wrapper">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#aboutMe">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Get in Touch</a></li>
             </ul>
+            <p class="logo">ec.</p>
         </nav>
-    </header>
-    <main>
-        <section class="hero" id="home">
+        <section class="hero wrapper" id="home">
             <h1>Emma Clarke</h1>
-            <p>Toronto BASED front-end web developer</p>
-            <a href="#contact">Get in touch!</a>
+            <p>Toronto-based web developer</p>
+            <p><a href="#contact" class="button">Get in touch!</a></p>
         </section>
+    </header>
+    <main class="wrapper">
         <section id="aboutMe">
-            <h2>About me</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius iste quisquam optio ad officia velit ea accusamus qui nobis esse.</p>
+            <h2>I'm Emma, thanks for stopping by!</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius iste quisquam optio ad officia velit ea accusamus qui nobis esse. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias facilis error, obcaecati necessitatibus, velit odio saepe corporis mollitia distinctio nulla, illo sed repudiandae quisquam omnis inventore architecto expedita. Accusamus aliquid provident ut quaerat sequi atque eum, a ipsam laboriosam. Repellat quaerat quibusdam, quod eaque perferendis aut? Voluptatum nisi reiciendis eligendi.</p>
+            <img width="422" height="450" src="./assets/emma-cropped.jpg"/>
         </section>
         <secton id="skills">
             <h2>Skills</h2>
@@ -38,16 +44,26 @@
             <div></div>
         </section>
         <section id="contact">
-            <h2>Let's talk</h2>
+            <h2>Get in touch</h2>
             <a href="https://github.com/emmacodeswell" target="_blank">GitHub</a>
             <a href="https://linkedin.com/in/emmacodeswell/" target="_blank">LinkedIn</a>
             <a href="https://instagram.com/floretandfaun" target="_blank">Instagram</a>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, odit quia. Error quis voluptate molestiae?</p>
-            <!-- Forme mernu placeholder -->
+            
+            <form action="https://formspree.io/f/mdoraoqk" method="POST">
+                <label>Your email:
+                    <input type="email" name="email">
+                </label>
+                <label>Your message:
+                    <textarea name="message"></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
     <footer>
-        <p>Built with ✨ by Emma Clarke in 2023</p>
+        <p class="wrapper">Built with ✨ by Emma Clarke in 2023</p>
     </footer>
 </body>
 </html>
