@@ -21,5 +21,29 @@
     margin-bottom: 2.5rem;
 }
 
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0 80px;
+}
+
+#skills {
+    
+    figure {
+        text-align: center;
+
+        figcaption {
+            text-transform: lowercase;
+            font-weight: bold;
+        }
+    }
+
+    svg {
+        fill: currentColor;
+        width: 5rem;
+        height: 5rem;
+    }
+}
 
 
