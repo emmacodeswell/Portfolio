@@ -3,6 +3,7 @@
 // GLOBAL styles
 
 body {
+    color: $mulberry;
     background-color: $beige;
     font-size: 1.5rem;
     font-family: $bodyFont;
@@ -20,8 +21,20 @@ main {
     }
 }
 
+footer {
+    text-align: center;
+    background-color: $wine;
+    text-transform: lowercase;
+    overflow: auto;
+    
+    p {
+        color: $beige;
+    }
+}
+
 h1,
-h2 {
+h2,
+h3 {
     font-family: $headerFont;
     color: $tangerine;
     text-transform: lowercase;
@@ -29,9 +42,21 @@ h2 {
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     color: $deepTangerine;
     margin: 2.5rem 0 1rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+    border-bottom: $dottedBorder currentColor;
+    line-height: 1.75;
+    text-align: center;
+}
+
+h3 {
+    font-size: 2rem;
+    margin: 1rem 0;
 }
 
 nav {
@@ -42,7 +67,7 @@ nav {
     ul {
         display: flex;
         flex-flow: row;
-        column-gap: $gap;
+        column-gap: ($gap / 2);
         list-style: none;
         padding: 0;
         margin: 0 auto 0 0;
@@ -52,13 +77,24 @@ nav {
         text-decoration: none;
         font-size: 1.5rem;
         font-weight: bold;
+        padding: 0.5rem 1rem;
         color: $wine;
+        border: 2.5px solid transparent;
+        transition: $defaultTransition;
+        box-shadow: 0 0 50px transparent;
+
+        &:hover {
+            color: $deepTangerine;
+            border-color: $tangerine;
+            border-radius: $buttonRadius;
+            box-shadow: 0 0 15px $deepTangerine;
+        }
     }
 }
 
 p {
-    margin: 1rem 0;
-    color: $mulberry;
+    margin: 1.5rem 0;
+    line-height: 1.5;
 }
 
 a {
@@ -69,28 +105,27 @@ a {
 button, .button {
     display: inline-block;
     font-weight: bold;
+    font-style: normal;
+    font-size: 1.5rem;
     color: $white;
     background-color: $deepTangerine;
-    padding: 1rem;
-    border-radius: 5px;
+    padding: $buttonPadding;
+    border-radius: $buttonRadius;
     text-decoration: none;
-    transition: background-color 0.2s ease-out;
+    text-transform: lowercase;
+    transition: $defaultTransition;
     border: 0;
+    text-shadow: 0 0 0px rgba($peach, 1);
 
     &:hover {
-        background-color: $mulberry;
+        background-color: $tomato;
+        text-shadow: 0 0 10px rgba($peach, 1);
     }
 }
 
-footer {
-    text-align: center;
-    background-color: $mulberry;
-    text-transform: lowercase;
-    overflow: auto;
-    
-    p {
-        color: $peach;
-    }
+hr {
+    border: none;
+    border-bottom: 2px solid $peach;
 }
 
 .alt {
