@@ -46,4 +46,42 @@
     }
 }
 
+#projects {
 
+    article {
+        display: flex;
+        flex-flow: row;
+        column-gap: $gap;
+        margin: $gap 0;
+
+        > * {
+            flex: 0 1 50%;
+        }
+
+        > img {
+            border-radius: 7rem;
+        }
+
+        > section {
+            text-align: right;
+        }
+
+        > img + section {
+            text-align: left;
+        }
+
+        .button {
+            margin-left: ($gap / 2);
+
+            &:first-of-type {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.tags {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: $wine;
+}
