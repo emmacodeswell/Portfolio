@@ -85,3 +85,75 @@
     font-size: 1.25rem;
     color: $wine;
 }
+
+#contact {
+
+    text-align: center;
+
+    a {
+        display: inline-block;
+        margin: 0 1rem;
+        transition: $defaultTransition;
+
+        svg {
+            width: 4rem;
+            height: 4rem;
+            padding: 0.5rem;
+            fill: $deepTangerine;
+            transition: $defaultTransition;
+        }
+
+        &:hover{
+            svg {
+                padding: 0;
+                fill: $tomato;
+            }
+        }
+    }
+
+    form {
+        display: flex;
+        flex-flow: column;
+        row-gap: $gap;
+
+        label {
+            display: none;
+        }
+
+        input,
+        textarea {
+            border: none;
+            border-radius: $buttonRadius;
+            padding: $buttonPadding;
+            background-color: $white;
+            color: $wine;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 0 10px $tangerine;
+            }
+
+            &::placeholder {
+                color: $rose;
+            }
+
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        button {
+            &:hover {
+                cursor: pointer;
+            }
+
+            &:focus {
+                &::after {
+                    content: ' (pls)';
+                    font-size: 0.75em;
+                }
+            }
+        }
+    }
+}
