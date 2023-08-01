@@ -9,6 +9,12 @@
     font-weight: bold;
     font-style: italic;
     font-family: $headerFont;
+
+#about {
+    img {
+        border-radius: $imageRadius;
+        margin: 1rem 0;
+    }
 }
 
 #skills {
@@ -35,7 +41,7 @@
         margin: $gap 0;
 
         > img {
-            border-radius: 7rem;
+            border-radius: $imageRadius;
         }
 
         > section {
