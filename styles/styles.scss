@@ -2,37 +2,13 @@
 @use './partials/global';
 @use "./partials/variables" as *;
 
-.wrapper {
-    margin-left: auto;
-    margin-right: auto;
-    width: $wrapperWidth;
-}
 
 .logo {
-    color: $deepTangerine;
+    color: var(--deepTangerine);
     font-size: 2rem;
     font-weight: bold;
     font-style: italic;
     font-family: $headerFont;
-}
-
-.hero {
-    text-align: center;
-    margin-bottom: 2.5rem;
-
-    p {
-        text-transform: lowercase;
-        font-size: 2rem;
-        font-style: italic;
-        color: $wine;
-    }
-}
-
-.flex {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 0 80px;
 }
 
 #skills {
@@ -90,7 +66,7 @@
 .tags {
     font-weight: bold;
     font-size: 1.25rem;
-    color: $wine;
+    color: var(--wine);
 }
 
 #contact {
@@ -106,14 +82,14 @@
             width: 4rem;
             height: 4rem;
             padding: 0.5rem;
-            fill: $deepTangerine;
+            fill: var(--deepTangerine);
             transition: $defaultTransition;
         }
 
         &:hover{
             svg {
                 padding: 0;
-                fill: $tomato;
+                fill: var(--tomato);
             }
         }
     }
@@ -161,6 +137,49 @@
                     font-size: 0.75em;
                 }
             }
+        }
+    }
+}
+
+.toggle {
+    background-color: var(--beige);
+    padding: 0.25rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    margin-right: $gap;
+    border-radius: $buttonRadius;
+    box-shadow: 0 3px 3px -3px rgba(black, 0.4) inset;
+    cursor: pointer;
+
+    input {
+        appearance: none;
+        cursor: pointer;
+
+        &:focus {
+            outline: none;
+        }
+        
+        &::after {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: "🏵️";
+            font-size: 1.5rem;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            box-shadow: 0 1px 2px rgba(black, 0.4);
+            background-color: rgba(white, 0.1);
+    
+            margin-right: 1em;
+            transition: $defaultTransition;
+        }
+    
+        &:checked::after {
+            margin-left: 1em;
+            margin-right: 0;
+
+            content: "🌙";
         }
     }
 }

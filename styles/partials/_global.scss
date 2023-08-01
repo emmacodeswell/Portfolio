@@ -2,15 +2,49 @@
 
 // GLOBAL styles
 
+* {
+    transition: $defaultTransition;
+}
+
+body:not(.darkMode) {
+    --beige: #{$beige};
+    --peach: #{$peach};
+    --rose: #{$rose};
+    --tangerine: #{$tangerine};
+    --deepTangerine: #{$deepTangerine};
+    --tomato: #{$tomato};
+    --mauve: #{$mauve};
+    --wine: #{$wine};
+    --mulberry: #{$mulberry};
+    --ash: #{$ash};
+    --black: #{$black};
+    --white: #{$white};
+}
+
+body.darkMode {
+    --beige: #{$ash};
+    --peach: #{$mulberry};
+    --rose: #{$wine};
+    --tangerine: #{$deepTangerine};
+    --deepTangerine: #{$tangerine};
+    --tomato: #{$tomato};
+    --mauve: #{$mauve};
+    --wine: #{$rose};
+    --mulberry: #{$beige};
+    --ash: #{$ash};
+    --black: #{$black};
+    --white: #{$white};
+}
+
 body {
-    color: $mulberry;
-    background-color: $beige;
+    color: var(--mulberry);
+    background-color: var(--beige);
     font-size: 1.5rem;
     font-family: $bodyFont;
 }
 
 header {
-    background-color: $peach;
+    background-color: var(--peach);
     overflow: auto;
 }
 
@@ -23,12 +57,12 @@ main {
 
 footer {
     text-align: center;
-    background-color: $wine;
+    background-color: var(--wine);
     text-transform: lowercase;
     overflow: auto;
     
     p {
-        color: $beige;
+        color: var(--beige);
     }
 }
 
@@ -36,14 +70,14 @@ h1,
 h2,
 h3 {
     font-family: $headerFont;
-    color: $tangerine;
+    color: var(--tangerine);
     text-transform: lowercase;
     font-style: italic;
 }
 
 h1 {
     font-size: 5rem;
-    color: $deepTangerine;
+    color: var(--deepTangerine);
     margin: 2.5rem 0 1rem;
 }
 
@@ -78,16 +112,16 @@ nav {
         font-size: 1.5rem;
         font-weight: bold;
         padding: 0.5rem 1rem;
-        color: $wine;
+        color: var(--wine);
         border: 2.5px solid transparent;
         transition: $defaultTransition;
         box-shadow: 0 0 50px transparent;
 
         &:hover {
-            color: $deepTangerine;
-            border-color: $tangerine;
+            color: var(--deepTangerine);
+            border-color: var(--tangerine);
             border-radius: $buttonRadius;
-            box-shadow: 0 0 15px $deepTangerine;
+            box-shadow: 0 0 15px var(--deepTangerine);
         }
     }
 }
@@ -98,7 +132,7 @@ p {
 }
 
 a {
-    color: $mauve;
+    color: var(--mauve);
     text-transform: lowercase;
 }
 
@@ -107,8 +141,8 @@ button, .button {
     font-weight: bold;
     font-style: normal;
     font-size: 1.5rem;
-    color: $white;
-    background-color: $deepTangerine;
+    color: var(--white);
+    background-color: var(--deepTangerine);
     padding: $buttonPadding;
     border-radius: $buttonRadius;
     text-decoration: none;
@@ -118,25 +152,43 @@ button, .button {
     text-shadow: 0 0 0px rgba($peach, 1);
 
     &:hover {
-        background-color: $tomato;
-        text-shadow: 0 0 10px rgba($peach, 1);
+        background-color: var(--tomato);
+        text-shadow: 0 0 10px $peach;
     }
 }
 
 hr {
     border: none;
-    border-bottom: 2px solid $peach;
+    border-bottom: 2px solid var(--peach);
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: $wrapperWidth;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 2.5rem;
+
+    p {
+        text-transform: lowercase;
+        font-size: 2rem;
+        font-style: italic;
+        color: var(--wine);
+    }
 }
 
 .alt {
-    background-color: $rose;
-    color: $white;
+    background-color: var(--rose);
+    color: var(--white);
 
     h2 {
-        color: $wine;
+        color: var(--wine);
     }
 }
 
 .vampy {
-    background-color: $peach;
+    background-color: var(--peach);
 }
