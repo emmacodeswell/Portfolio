@@ -149,7 +149,7 @@ button, .button {
     text-transform: lowercase;
     transition: $defaultTransition;
     border: 0;
-    text-shadow: 0 0 0px rgba($peach, 1);
+    text-shadow: 0 0 0px $peach;
 
     &:hover {
         background-color: var(--tomato);
