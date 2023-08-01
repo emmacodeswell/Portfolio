@@ -1,6 +1,15 @@
 @use './variables' as *;
+@use './mixins' as *;
 
 // GLOBAL styles
+
+html {
+    scroll-behavior: smooth;
+    
+    @include mobile {
+        font-size: 0.666rem;
+    }
+}
 
 * {
     transition: $defaultTransition;
@@ -52,6 +61,18 @@ main {
     > section {
         padding: 0 calc((100% - $wrapperWidth) / 2) 2rem;
         overflow: auto;
+
+        @include tablet {
+            $padding: calc((100% - $tablet) / 2 + $gap);
+            padding-left: $padding;
+            padding-right: $padding; 
+        }
+
+        @include mobile {
+            // $padding: calc((100% - $mobile) / 2 + ($gap / 2));
+            padding-left: $gap;
+            padding-right: $gap; 
+        }
     }
 }
 
@@ -86,6 +107,7 @@ h2 {
     border-bottom: $dottedBorder currentColor;
     line-height: 1.75;
     text-align: center;
+    margin: 3rem 0;
 }
 
 h3 {
@@ -154,6 +176,19 @@ button, .button {
     &:hover {
         background-color: var(--tomato);
         text-shadow: 0 0 10px $peach;
+        box-shadow: 0 0 15px var(--tangerine);
+
+    }
+}
+
+button,
+.button,
+input[type="email"],
+input[type="text"],
+textarea {
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 15px var(--tangerine);
     }
 }
 
@@ -162,10 +197,31 @@ hr {
     border-bottom: 2px solid var(--peach);
 }
 
+img[width] {
+    flex: 0 0 auto;
+    max-width: 100%;
+    height: auto;
+    align-self: flex-start;
+}
+
+figure {
+    margin: $gap;
+}
+
 .wrapper {
     margin-left: auto;
     margin-right: auto;
     width: $wrapperWidth;
+
+    @include tablet {
+        width: $tablet;
+        padding-left: $gap;
+        padding-right: $gap;
+    }
+
+    @include mobile {
+        width: auto;
+    }
 }
 
 .hero {
@@ -200,6 +256,12 @@ hr {
 
     figure {
         width: 8rem;
+
+        @include tablet {
+            margin: ($gap / 2);
+        }
+    }
+}
 
 .twoCol {
     display: flex;

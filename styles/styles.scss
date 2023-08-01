@@ -1,7 +1,7 @@
 @use "./partials/setup";
 @use './partials/global';
 @use "./partials/variables" as *;
-
+@use "./partials/mixins" as *;
 
 .logo {
     color: var(--deepTangerine);
@@ -9,6 +9,11 @@
     font-weight: bold;
     font-style: italic;
     font-family: $headerFont;
+
+    @include mobile {
+        display: none;
+    }
+}
 
 #about {
     img {
@@ -44,12 +49,14 @@
             border-radius: $imageRadius;
         }
 
-        > section {
-            text-align: right;
-        }
-
-        > img + section {
-            text-align: left;
+        @include desktop {
+            > section {
+                text-align: right;
+            }
+    
+            > img + section {
+                text-align: left;
+            }
         }
 
         .button {
@@ -96,7 +103,9 @@
     form {
         display: flex;
         flex-flow: column;
+        flex-basis: 66%;
         row-gap: $gap;
+        margin: 1.5rem 0;
 
         label {
             display: none;
@@ -110,11 +119,6 @@
             background-color: $white;
             color: $wine;
 
-            &:focus {
-                outline: none;
-                box-shadow: 0 0 10px $tangerine;
-            }
-
             &::placeholder {
                 color: $rose;
             }
@@ -126,6 +130,9 @@
         }
 
         button {
+            align-self: center;
+            width: 50%;
+
             &:hover {
                 cursor: pointer;
             }
