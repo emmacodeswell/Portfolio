@@ -32,14 +32,7 @@
 #projects {
 
     article {
-        display: flex;
-        flex-flow: row;
-        column-gap: $gap;
         margin: $gap 0;
-
-        > * {
-            flex: 0 1 50%;
-        }
 
         > img {
             border-radius: 7rem;

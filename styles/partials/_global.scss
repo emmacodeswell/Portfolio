@@ -200,5 +200,27 @@ hr {
 
     figure {
         width: 8rem;
+
+.twoCol {
+    display: flex;
+    flex-flow: row;
+    column-gap: $gap;
+
+    @include tablet {
+        flex-flow: row wrap;
+        justify-content: center;
+        text-align: center;
+
+        > img {
+            order: -1;
+        }
+    }
+    
+    > * {
+        flex: 1 1 50%;
+    
+        @include tablet {
+            flex-basis: 100%;
+        }
     }
 }
