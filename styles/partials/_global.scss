@@ -192,3 +192,13 @@ hr {
 .vampy {
     background-color: var(--peach);
 }
+
+.icons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    figure {
+        width: 8rem;
+    }
+}
