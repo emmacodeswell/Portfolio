@@ -1,0 +1,23 @@
+{
+  "name": "portolio-project",
+  "version": "1.0.0",
+  "description": "My portfolio",
+  "main": "index.html",
+  "scripts": {
+    "build": "node ./node_modules/sass/sass.js styles",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emmacodeswell/Portfolio.git"
+  },
+  "author": "Emma Clarke",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/emmacodeswell/Portfolio/issues"
+  },
+  "homepage": "https://github.com/emmacodeswell/Portfolio#readme",
+  "dependencies": {
+    "sass": "^1.64.2"
+  }
+}
