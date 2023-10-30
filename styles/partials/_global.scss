@@ -5,6 +5,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px;
     
     @include mobile {
         font-size: 0.666rem;
@@ -48,7 +49,7 @@ body.darkMode {
 body {
     color: var(--mulberry);
     background-color: var(--beige);
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-family: $bodyFont;
 }
 
@@ -59,7 +60,7 @@ header {
 
 main {
     > section {
-        padding: 0 calc((100% - $wrapperWidth) / 2) 2rem;
+        padding: 2rem calc((100% - $wrapperWidth) / 2);
         overflow: auto;
 
         @include tablet {
@@ -97,21 +98,20 @@ h3 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 3rem;
     color: var(--deepTangerine);
     margin: 2.5rem 0 1rem;
 }
 
 h2 {
-    font-size: 3.5rem;
-    border-bottom: $dottedBorder currentColor;
+    font-size: 2rem;
     line-height: 1.75;
     text-align: center;
-    margin: 3rem 0;
+    margin: 0.5rem 0;
 }
 
 h3 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 1rem 0;
 }
 
@@ -131,7 +131,7 @@ nav {
 
     a {
         text-decoration: none;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: bold;
         padding: 0.5rem 1rem;
         color: var(--wine);
@@ -162,7 +162,7 @@ button, .button {
     display: inline-block;
     font-weight: bold;
     font-style: normal;
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: var(--white);
     background-color: var(--deepTangerine);
     padding: $buttonPadding;
@@ -230,7 +230,7 @@ figure {
 
     p {
         text-transform: lowercase;
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-style: italic;
         color: var(--wine);
     }
@@ -255,7 +255,7 @@ figure {
     justify-content: center;
 
     figure {
-        width: 8rem;
+        width: 2rem;
 
         @include tablet {
             margin: ($gap / 2);
@@ -265,8 +265,10 @@ figure {
 
 .twoCol {
     display: flex;
+    align-items: center;
     flex-flow: row;
-    column-gap: $gap;
+    column-gap: $gap * 2;
+    text-align: center;
 
     @include tablet {
         flex-flow: row wrap;
