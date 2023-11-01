@@ -11,7 +11,7 @@
     font-family: $headerFont;
 
     @include mobile {
-        display: none;
+        // display: none;
     }
 }
 
@@ -30,6 +30,8 @@
     
     figure {
         text-align: center;
+        flex-shrink: 0;
+        flex-basis: 6rem;
 
         figcaption {
             text-transform: lowercase;
@@ -130,7 +132,7 @@
         }
 
         textarea {
-            resize: none;
+            // resize: none;
         }
 
         button {
@@ -139,13 +141,6 @@
 
             &:hover {
                 cursor: pointer;
-            }
-
-            &:focus {
-                &::after {
-                    content: ' (pls)';
-                    font-size: 0.75em;
-                }
             }
         }
     }
